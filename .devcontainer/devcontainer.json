@@ -1,0 +1,24 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/python:3.12",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.mypy-type-checker",
+				"ms-python.vscode-pylance",
+				"ms-python.debugpy",
+				"ms-python.vscode-python-envs",
+				"charliermarsh.ruff",
+				"the0807.uv-toolkit",
+				"GitHub.copilot"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers-extra/features/mypy:2": {},
+		"ghcr.io/devcontainers-extra/features/ruff:1": {},
+		"ghcr.io/devcontainers-extra/features/uv:1": {}
+	}
+	,
+	"postCreateCommand": "uv venv --clear .venv && uv sync --all-packages --extra dev"
+}
